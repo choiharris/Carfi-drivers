@@ -1,6 +1,26 @@
 {
   "articles": [
     {
+      "id": "SEO-20261018-02",
+      "title": "車保自負額點睇？先問清楚三件事",
+      "date": "2026-10-18",
+      "category": "車保比較",
+      "excerpt": "自負額先問清楚適用索償、額外條件同計算方式。",
+      "url": "/articles/motor-insurance-excess-checklist/",
+      "image": "/assets/article-seo-20261018-02.png",
+      "imageAlt": "車保自負額，唔係只睇一個數"
+    },
+    {
+      "id": "SEO-20261018-03",
+      "title": "車保就到期？續保前先整理五項資料",
+      "date": "2026-10-18",
+      "category": "續保準備",
+      "excerpt": "續保前整理到期時間、車款用途、司機情況、意外及NCD紀錄。",
+      "url": "/articles/motor-insurance-renewal-preparation/",
+      "image": "/assets/article-seo-20261018-03.png",
+      "imageAlt": "車保續保，續保前準備清單"
+    },
+    {
       "id": "S20261018-01-v2",
       "title": "網約車保險報價，淨係睇保費夠唔夠？",
       "date": "2026-10-18",
