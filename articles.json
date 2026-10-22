@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "id": "WEB-TAXI-20261021-01",
+      "title": "揸的士定網約車好？租車與供車的收入、成本及資產比較",
+      "date": "2026-10-22",
+      "category": "司機營運比較",
+      "excerpt": "由租更同自購車輛出發，比較所有權、時間自主、淨收入、現金流及保險。",
+      "url": "/taxi-vs-ride-hailing-driver-hong-kong/",
+      "image": "https://static.metricool.com/planner/202610/7479523-file-4661174479323962145.png",
+      "imageAlt": "揸的士，定揸網約車？比較成本、時間、保障"
+    },
+    {
       "id": "WEB-AIG-20261020-01",
       "title": "Uber有AIG保險，為何司機仍被控無第三者保險？｜香港網約車保險分析",
       "date": "2026-10-20",
