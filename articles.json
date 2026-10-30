@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "id": "WEB-NEWS-20261029-01-v2",
+      "title": "平台申請已截止，司機下一步做咩？",
+      "date": "2026-10-31",
+      "category": "網約車申請資訊",
+      "excerpt": "平台申請已截止，分清司機、車輛申請及保險準備。",
+      "url": "/articles/ride-hailing-platform-deadline-driver-preparation/",
+      "image": "/assets/news-20261030-v2.png",
+      "imageAlt": "平台申請截止，唔等於司機截止"
+    },
+    {
       "id": "WEB-TAXI-20261021-01",
       "title": "揸的士定網約車好？租車與供車的收入、成本及資產比較",
       "date": "2026-10-22",
