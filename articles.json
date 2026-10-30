@@ -1,14 +1,14 @@
 {
   "articles": [
     {
-      "id": "WEB-NEWS-20261029-01-v2",
-      "title": "平台申請已截止，司機下一步做咩？",
+      "id": "WEB-NEWS-20261031-01-v3",
+      "title": "平台申請期結束，司機而家準備咩？",
       "date": "2026-10-31",
       "category": "網約車申請資訊",
-      "excerpt": "平台申請已截止，分清司機、車輛申請及保險準備。",
+      "excerpt": "平台、司機及車輛申請分開處理，先整理駕駛資格、車輛資料及保險用途。",
       "url": "/articles/ride-hailing-platform-deadline-driver-preparation/",
-      "image": "/assets/news-20261030-v2.png",
-      "imageAlt": "平台申請截止，唔等於司機截止"
+      "image": "https://static.metricool.com/planner/202610/7479523-file-14227574558792430385.png",
+      "imageAlt": "平台申請期結束，司機先整理駕駛資格、車輛資料及保險用途"
     },
     {
       "id": "WEB-TAXI-20261021-01",
