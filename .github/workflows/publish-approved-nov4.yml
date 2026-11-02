@@ -1,0 +1,83 @@
+name: Publish approved articles on 4 November 2026
+on:
+  schedule:
+    - cron: '30 1 4 11 *'
+    - cron: '0 8 4 11 *'
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/publish-approved-nov4.yml'
+permissions:
+  contents: write
+concurrency:
+  group: publish-approved-nov4
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.event_name != 'schedule' || startsWith(github.event.schedule, '30 1') || startsWith(github.event.schedule, '0 8')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Add due approved articles to website listings
+        run: |
+          python3 - <<'PY'
+          import json, re, sys
+          from pathlib import Path
+          from datetime import datetime
+          from html import escape
+          ITEMS = json.loads("[{\"id\":\"WEB-MOTOR-20261021-01-v2\",\"title\":\"全保同三保點樣揀？先問自己承擔到幾多維修費\",\"date\":\"2026-11-04\",\"category\":\"車保比較\",\"excerpt\":\"比較自身車損、維修承擔能力、自負額及用途限制，投保前先問清楚。\",\"url\":\"/articles/comprehensive-vs-third-party-motor-insurance/\",\"image\":\"https://static.metricool.com/planner/202611/7479523-file-2513943824875710663.png\",\"imageAlt\":\"全保同三保點樣揀？先問自己承擔到幾多維修費\",\"publishAt\":\"2026-11-04T09:30:00+08:00\"},{\"id\":\"WEB-CLAIM-20261021-01-v2\",\"title\":\"撞車後要留低咩？一份安全先行嘅索償資料清單\",\"date\":\"2026-11-04\",\"category\":\"事故索償\",\"excerpt\":\"安全保存現場記錄、車Cam原檔及索償文件，及早了解保單通知與維修要求。\",\"url\":\"/articles/car-accident-insurance-evidence-checklist/\",\"image\":\"https://static.metricool.com/planner/202611/7479523-file-9033745913934816727.png\",\"imageAlt\":\"撞車後要留低咩？一份安全先行嘅索償資料清單\",\"publishAt\":\"2026-11-04T16:00:00+08:00\"}]")
+          now = datetime.fromisoformat(sys.argv[1]) if len(sys.argv)>1 else datetime.now().astimezone()
+          manifest = Path("articles.json")
+          data = json.loads(manifest.read_text())
+          existing = {a["id"] for a in data["articles"]}
+          due = [a for a in ITEMS if datetime.fromisoformat(a["publishAt"]) <= now and a["id"] not in existing]
+          if not due:
+              print("No approved articles due")
+              sys.exit(0)
+          for item in reversed(due):
+              article = {k:v for k,v in item.items() if k != "publishAt"}
+              assert Path(item["url"].strip("/") + "/index.html").is_file(), item["url"]
+              data["articles"].insert(0,article)
+          def card(a):
+              e=lambda key:escape(a[key],quote=True)
+              y,m,d=a["date"].split("-")
+              return '<article class="news-card"><a class="news-picture" href="'+e("url")+'"><img src="'+e("image")+'" alt="'+e("imageAlt")+'" width="1254" height="1254" loading="lazy"></a><div class="news-copy"><p class="news-meta"><span>'+e("category")+'</span><time datetime="'+e("date")+'">'+y+'年'+str(int(m))+'月'+str(int(d))+'日</time></p><h3><a href="'+e("url")+'">'+e("title")+'</a></h3><p>'+e("excerpt")+'</p><a class="text-link" href="'+e("url")+'">閱讀全文 →</a></div></article>'
+          cards="".join(card(a) for a in data["articles"])
+          updates={}
+          for filename,start,end in [
+              ("index.html",'<div class="news-stage" data-news-stage>', '</div><div class="news-controls"'),
+              ("articles/index.html",'<div class="news-list" data-news-list>', '</div><div class="article-note"')]:
+              source=Path(filename).read_text()
+              assert source.count(start)==1 and source.count(end)==1, filename
+              a=source.index(start)+len(start); b=source.index(end,a)
+              source=source[:a]+cards+source[b:]
+              if filename=="articles/index.html":
+                  source,n=re.subn(r'data-news-total>共\d+篇文章', 'data-news-total>共'+str(len(data["articles"]))+'篇文章',source)
+                  assert n==1
+              updates[filename]=source
+          sitemap=Path("sitemap.xml").read_text()
+          for a in due:
+              loc="https://drivers.carfi.fi"+a["url"]
+              if "<loc>"+loc+"</loc>" not in sitemap:
+                  sitemap=sitemap.replace("</urlset>", "<url><loc>"+loc+"</loc><lastmod>"+a["date"]+"</lastmod></url></urlset>")
+          assert len({a["id"] for a in data["articles"]})==len(data["articles"])
+          updates["articles.json"]=json.dumps(data,ensure_ascii=False,indent=2)+"\n"
+          updates["sitemap.xml"]=sitemap
+          for filename,content in updates.items():
+              Path(filename).write_text(content)
+          print("Published:",", ".join(a["id"] for a in due))
+          
+          PY
+      - name: Commit only publication files
+        run: |
+          git add articles.json index.html articles/index.html sitemap.xml
+          if git diff --cached --quiet; then
+            echo "No publication changes due."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Publish due approved Carfi articles"
+          git push origin HEAD:main
