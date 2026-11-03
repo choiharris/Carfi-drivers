@@ -1,8 +1,8 @@
-name: Publish approved articles on 4 November 2026
+name: Publish approved articles on 3 November 2026
 on:
   schedule:
-    - cron: '30 1 4 11 *'
-    - cron: '0 8 4 11 *'
+    - cron: '30 1 3 11 *'
+    - cron: '0 8 3 11 *'
   workflow_dispatch:
   push:
     paths:
@@ -27,7 +27,7 @@ jobs:
           from pathlib import Path
           from datetime import datetime
           from html import escape
-          ITEMS = json.loads("[{\"id\":\"WEB-MOTOR-20261021-01-v2\",\"title\":\"全保同三保點樣揀？先問自己承擔到幾多維修費\",\"date\":\"2026-11-04\",\"category\":\"車保比較\",\"excerpt\":\"比較自身車損、維修承擔能力、自負額及用途限制，投保前先問清楚。\",\"url\":\"/articles/comprehensive-vs-third-party-motor-insurance/\",\"image\":\"https://static.metricool.com/planner/202611/7479523-file-2513943824875710663.png\",\"imageAlt\":\"全保同三保點樣揀？先問自己承擔到幾多維修費\",\"publishAt\":\"2026-11-04T09:30:00+08:00\"},{\"id\":\"WEB-CLAIM-20261021-01-v2\",\"title\":\"撞車後要留低咩？一份安全先行嘅索償資料清單\",\"date\":\"2026-11-04\",\"category\":\"事故索償\",\"excerpt\":\"安全保存現場記錄、車Cam原檔及索償文件，及早了解保單通知與維修要求。\",\"url\":\"/articles/car-accident-insurance-evidence-checklist/\",\"image\":\"https://static.metricool.com/planner/202611/7479523-file-9033745913934816727.png\",\"imageAlt\":\"撞車後要留低咩？一份安全先行嘅索償資料清單\",\"publishAt\":\"2026-11-04T16:00:00+08:00\"}]")
+          ITEMS = json.loads("[{\"id\":\"WEB-MOTOR-20261021-01-v2\",\"title\":\"全保同三保點樣揀？先問自己承擔到幾多維修費\",\"date\":\"2026-11-03\",\"category\":\"車保比較\",\"excerpt\":\"比較自身車損、維修承擔能力、自負額及用途限制，投保前先問清楚。\",\"url\":\"/articles/comprehensive-vs-third-party-motor-insurance/\",\"image\":\"https://static.metricool.com/planner/202611/7479523-file-2513943824875710663.png\",\"imageAlt\":\"全保同三保點樣揀？先問自己承擔到幾多維修費\",\"publishAt\":\"2026-11-03T09:30:00+08:00\"},{\"id\":\"WEB-CLAIM-20261021-01-v2\",\"title\":\"撞車後要留低咩？一份安全先行嘅索償資料清單\",\"date\":\"2026-11-03\",\"category\":\"事故索償\",\"excerpt\":\"安全保存現場記錄、車Cam原檔及索償文件，及早了解保單通知與維修要求。\",\"url\":\"/articles/car-accident-insurance-evidence-checklist/\",\"image\":\"https://static.metricool.com/planner/202611/7479523-file-9033745913934816727.png\",\"imageAlt\":\"撞車後要留低咩？一份安全先行嘅索償資料清單\",\"publishAt\":\"2026-11-03T16:00:00+08:00\"}]")
           now = datetime.fromisoformat(sys.argv[1]) if len(sys.argv)>1 else datetime.now().astimezone()
           manifest = Path("articles.json")
           data = json.loads(manifest.read_text())
