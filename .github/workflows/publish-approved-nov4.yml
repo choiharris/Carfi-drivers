@@ -81,3 +81,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Publish due approved Carfi articles"
           git push origin HEAD:main
+
+# Reconcile due approved publications after the 3 November afternoon launch.
