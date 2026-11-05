@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "include": [
+    "/",
+    "/index.html",
+    "/articles",
+    "/articles/*",
+    "/articles.json",
+    "/sitemap.xml"
+  ],
+  "exclude": []
+}
