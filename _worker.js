@@ -1,4 +1,4 @@
-// Approved November 6–8 publication schedule. All times include the HK offset.
+// Approved November 6–13 publication schedule. All times include the HK offset.
 // No client parameter can override the server publication clock.
 const SCHEDULED = [
   {
@@ -33,6 +33,61 @@ const SCHEDULED = [
     "url": "/articles/accident-analysis-legal-support/",
     "image": "https://static.metricool.com/planner/202611/7479523-file-9725126302149598389.png",
     "imageAlt": "需要法律支援時，先分清初步分析同專業意見"
+  },
+  {
+    "id": "SERVICE-20261024-03-v2",
+    "title": "事故之後，將一堆問題拆成清楚嘅下一步",
+    "date": "2026-11-09",
+    "publishAt": "2026-11-09T09:00:00+08:00",
+    "category": "車保服務解說",
+    "excerpt": "安全、保險通知、維修同文件，逐步整理事故後嘅跟進事項。",
+    "url": "/articles/car-accident-support-next-steps/",
+    "image": "https://static.metricool.com/planner/202611/7479523-file-12339181239610398799.png",
+    "imageAlt": "事故之後，將一堆問題拆成清楚嘅下一步"
+  },
+  {
+    "id": "D013-20261110-v1",
+    "title": "轉保之前，點樣避免新舊保障接唔上？",
+    "date": "2026-11-10",
+    "publishAt": "2026-11-10T09:00:00+08:00",
+    "category": "車保實用資訊",
+    "excerpt": "轉保先核對新保障生效、舊保單取消、退款及折扣文件。",
+    "url": "/articles/motor-insurance-switch-cover-dates/",
+    "image": "https://static.metricool.com/planner/202611/7479523-file-13837304929167749571.png",
+    "imageAlt": "轉保之前，點樣避免新舊保障接唔上？"
+  },
+  {
+    "id": "D006-20261111-v1",
+    "title": "填咗意向表，係咪已經有保險？",
+    "date": "2026-11-11",
+    "publishAt": "2026-11-11T09:00:00+08:00",
+    "category": "車保實用資訊",
+    "excerpt": "意向登記、報價、核保同正式生效係不同階段，逐步確認保障。",
+    "url": "/articles/insurance-interest-form-not-cover/",
+    "image": "https://static.metricool.com/planner/202611/7479523-file-13744563182339744742.png",
+    "imageAlt": "填咗意向表，係咪已經有保險？"
+  },
+  {
+    "id": "D003-20261112-v1",
+    "title": "分享車保報價前，邊啲資料要遮蓋？",
+    "date": "2026-11-12",
+    "publishAt": "2026-11-12T09:00:00+08:00",
+    "category": "車保實用資訊",
+    "excerpt": "比較報價前先保護個人資料，公開討論同正式核保文件分開處理。",
+    "url": "/articles/sharing-motor-insurance-quotes-privacy/",
+    "image": "https://static.metricool.com/planner/202611/7479523-file-9213403502001749585.png",
+    "imageAlt": "分享車保報價前，邊啲資料要遮蓋？"
+  },
+  {
+    "id": "COLLECT-20261113-v3",
+    "title": "集合司機需要，爭取更優惠車保",
+    "date": "2026-11-13",
+    "publishAt": "2026-11-13T09:00:00+08:00",
+    "category": "司機社群",
+    "excerpt": "先自願了解需要，再洽談報價安排；現階段未有已確認專屬優惠。",
+    "url": "/articles/ride-hailing-insurance-community-enquiry/",
+    "image": "https://static.metricool.com/planner/202611/7479523-file-16196301462433236801.png",
+    "imageAlt": "集合司機需要，爭取更優惠車保"
   }
 ];
 const escapeHtml = s => String(s).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;");
