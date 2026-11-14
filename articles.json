@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "id": "FALLING-GLASS-20261114",
+      "title": "土瓜灣高空墮物砸裂天幕玻璃，車主應該向邊個索償？",
+      "date": "2026-11-14",
+      "category": "事故索償",
+      "excerpt": "高空墮物砸車後，Carfi 查閱大廈保單，衡量證據及風險，再協助車主經業主嘅家居保險跟進索償。",
+      "url": "/articles/falling-glass-car-roof-insurance-claim/",
+      "image": "/assets/carfi-falling-glass-cover.webp",
+      "imageAlt": "高空墮物砸裂汽車天幕玻璃（情境示意圖）"
+    },
+    {
       "id": "WEB-CLAIM-20261021-01-v2",
       "title": "撞車後要留低咩？一份安全先行嘅索償資料清單",
       "date": "2026-11-03",
@@ -102,4 +112,3 @@
     }
   ]
 }
-
