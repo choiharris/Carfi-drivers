@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "id": "CF-PRE10-02-v2",
+      "title": "兩架車續保，點樣唔撈亂？",
+      "date": "2026-11-16",
+      "category": "車保實用資訊",
+      "excerpt": "一架車記一行，續保前核對車牌、用途、主要司機同到期日。",
+      "url": "/articles/two-cars-policy-organisation/",
+      "image": "/assets/carfi-two-cars-policy-organisation.jpg",
+      "imageAlt": "兩架車續保示意圖"
+    },
+    {
       "id": "CF-PRE10-01-v2",
       "title": "買電動車前，車保要問咩？",
       "date": "2026-11-16",
