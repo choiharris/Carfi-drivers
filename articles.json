@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "id": "CF-PRE10-03-v2",
+      "title": "二手車試車，先問邊份保險",
+      "date": "2026-11-17",
+      "category": "車保實用資訊",
+      "excerpt": "二手車試車前，問清楚邊份保單適用、駕駛條件同自負額。",
+      "url": "/articles/used-car-test-drive-cover/",
+      "image": "/assets/carfi-used-car-test-drive-cover.jpg",
+      "imageAlt": "二手車試車保障示意圖"
+    },
+    {
       "id": "CF-PRE10-02-v2",
       "title": "兩架車續保，點樣唔撈亂？",
       "date": "2026-11-16",
