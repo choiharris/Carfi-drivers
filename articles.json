@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "id": "CF-PRE10-05-v3",
+      "title": "網約車可以借畀人揸，但接單要車主本人",
+      "date": "2026-11-18",
+      "category": "網約車資訊",
+      "excerpt": "網約車接單要由登記車主本人駕駛，日常私人借車則要核對駕駛資格同保單保障。",
+      "url": "/articles/ride-hailing-registered-owner/",
+      "image": "/assets/carfi-ride-hailing-registered-owner.jpg",
+      "imageAlt": "網約車車主與司機核對車輛登記示意圖"
+    },
+    {
       "id": "CF-PRE10-04-v2",
       "title": "車保文件寫錯車牌，點處理？",
       "date": "2026-11-17",
