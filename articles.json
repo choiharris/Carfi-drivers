@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "id": "CF-PRE10-08-v2",
+      "title": "想換輪圈，續保前要留低咩？",
+      "date": "2026-11-20",
+      "category": "車保實用資訊",
+      "excerpt": "換輪圈前，留低原廠同擬換規格，向承保方核對續保資料同附加條件。",
+      "url": "/articles/alloy-wheel-modification-insurance/",
+      "image": "/assets/carfi-alloy-wheel-modification-insurance.jpg",
+      "imageAlt": "改輪圈前問保險"
+    },
+    {
       "id": "CF-PRE10-07-v2",
       "title": "擋風玻璃崩咗一點，先影咩？",
       "date": "2026-11-19",
