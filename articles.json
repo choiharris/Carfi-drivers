@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "id": "CF-PRE10-09-v2",
+      "title": "叫拖車前，安全情況下先問三樣",
+      "date": "2026-11-20",
+      "category": "車保實用資訊",
+      "excerpt": "叫拖車前，先問邊個安排、拖去邊同費用點計。",
+      "url": "/articles/car-towing-checklist/",
+      "image": "/assets/carfi-car-towing-checklist.jpg",
+      "imageAlt": "拖車前先問三樣嘢"
+    },
+    {
       "id": "CF-PRE10-08-v2",
       "title": "想換輪圈，續保前要留低咩？",
       "date": "2026-11-20",
