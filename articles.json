@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "id": "CF-PRE10-10-v2",
+      "title": "索償跟到邊？用一張表就夠",
+      "date": "2026-11-21",
+      "category": "車保實用資訊",
+      "excerpt": "用一張表記低索償交件日期、聯絡人同待覆事項，方便跟進。",
+      "url": "/articles/motor-claim-progress-tracker/",
+      "image": "/assets/carfi-motor-claim-progress-tracker.jpg",
+      "imageAlt": "索償跟到邊用一張表"
+    },
+    {
       "id": "CF-PRE10-09-v2",
       "title": "叫拖車前，安全情況下先問三樣",
       "date": "2026-11-20",
