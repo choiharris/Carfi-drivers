@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "id": "CF-TRIP-13",
+      "title": "撞車後交車Cam片，點樣標記先易睇？",
+      "date": "2026-11-25",
+      "category": "車保實用資訊",
+      "excerpt": "交車Cam片前，先保留原檔，再標記前後鏡、事發方向同片段時間。",
+      "url": "/articles/dashcam-footage-submission-notes/",
+      "image": "/assets/carfi-dashcam-footage-submission-notes.jpg",
+      "imageAlt": "撞車後交車Cam片，點樣標記先易睇？（情境配圖）"
+    },
+    {
       "id": "CF-TRIP-12",
       "title": "架車幾個月唔揸，續保前要諗清楚咩？",
       "date": "2026-11-24",
