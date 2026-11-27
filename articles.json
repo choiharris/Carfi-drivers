@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "id": "CF-TRIP-15",
+      "title": "搬屋之後，車保有咩資料要更新？",
+      "date": "2026-11-27",
+      "excerpt": "搬屋後核對車保通訊地址，了解停泊安排有變時幾時需要通知保險公司。",
+      "url": "/articles/motor-insurance-address-change/",
+      "image": "/assets/carfi-motor-insurance-address-change.jpg",
+      "imageAlt": "搬屋之後，車保有咩資料要更新？（情境配圖）",
+      "category": "車保實用資訊"
+    },
+    {
       "id": "CF-TRIP-14",
       "title": "收到維修估價，點解要問清楚包咗啲咩？",
       "date": "2026-11-26",
